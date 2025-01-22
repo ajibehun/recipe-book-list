@@ -1,4 +1,4 @@
-# Vite Project Setup
+# Project Setup
 
 This is a simple project setup using [Vite](https://vitejs.dev/) for fast and efficient development.
 ## Getting Started
