@@ -22,6 +22,6 @@ Follow these steps to get up and running with your Vite project:
 
 3. Start development server
 
-  npm run dev
+   npm run dev
 
    
