@@ -16,6 +16,7 @@ import RecipeCard from "./RecipeCard.vue";
 
 const store = useRecipeStore();
 
+//fetch list on render
 onMounted(() => {
   store.fetchRecipes();
 });

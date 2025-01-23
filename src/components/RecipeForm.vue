@@ -206,6 +206,7 @@ const addRecipe = async () => {
       instructions: instructions.value,
     };
 
+    //save new recipe to store
     store.saveRecipe(newRecipe);
 
     name.value = "";

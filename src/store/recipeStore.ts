@@ -13,6 +13,7 @@ interface Recipe {
   instructions: string;
 }
 
+//return initial state 
 export const useRecipeStore = defineStore("recipeStore", {
   state: () => ({
     recipes: [] as Recipe[],
@@ -24,6 +25,7 @@ export const useRecipeStore = defineStore("recipeStore", {
     itemsPerPage: 9,
   }),
 
+  //define app logic
   actions: {
     async fetchRecipes() {
       try {
@@ -86,6 +88,7 @@ export const useRecipeStore = defineStore("recipeStore", {
       };
 
       this.savedRecipes.push(formattedRecipe);
+      //store recipe to local storage
       localStorage.setItem("savedRecipes", JSON.stringify(this.savedRecipes));
     },
 
@@ -136,6 +139,7 @@ export const useRecipeStore = defineStore("recipeStore", {
     },
   },
 
+  //computed values of the app
   getters: {
     paginatedRecipes: (state) => {
       const start = (state.currentPage - 1) * state.itemsPerPage;

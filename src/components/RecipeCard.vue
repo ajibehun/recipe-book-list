@@ -29,10 +29,12 @@ const store = useRecipeStore();
 const router = useRouter();
 
 const isSaved = computed(() =>
+//save recipe to store
   store.savedRecipes.some((r) => r.id === props.recipe.id)
 );
 
 const toggleSave = () => {
+  //check save state
   if (isSaved.value) {
     store.removeRecipe(props.recipe);
   } else {
